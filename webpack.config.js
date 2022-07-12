@@ -5,6 +5,10 @@ module.exports = {
   entry: './src/index.js',
   mode: 'development',
 
+  devServer: {
+    static: './dist',
+  },
+
   plugins: [
     new HtmlWebpackPlugin({
       title: 'Output Management',
@@ -14,6 +18,7 @@ module.exports = {
   output: {
     filename: 'main.js',
     path: path.resolve(__dirname, 'dist'),
+    publicPath: '/',
   },
 
   module: {
